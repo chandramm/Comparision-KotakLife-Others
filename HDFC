@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Securing Your Future - Kotak vs HDFC</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom animations -->
+    <style>
+        .fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-red-200">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b-4 border-red-600 px-6 py-4 flex justify-between items-center sticky top-0 z-10">
+        <div>
+            <h1 class="text-2xl font-bold text-slate-900">Securing Your Future</h1>
+            <p class="text-sm text-slate-500 font-medium">A Comparative Analysis for Our Valued Client</p>
+        </div>
+        <div class="flex items-center space-x-2">
+            <div class="h-10 w-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                K
+            </div>
+            <span class="font-bold text-lg text-red-600 tracking-tight">Kotak Life</span>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        
+        <!-- Navigation Tabs -->
+        <div class="flex space-x-1 bg-white p-1 rounded-xl shadow-sm border border-slate-200 mb-8 overflow-x-auto">
+            <button id="btn-overview" onclick="switchTab('overview')" class="tab-btn active-tab flex items-center space-x-2 px-6 py-3 rounded-lg font-medium text-sm transition-all whitespace-nowrap bg-red-50 text-red-700 shadow-sm border border-red-100">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+                <span>The Big Picture</span>
+            </button>
+            <button id="btn-security" onclick="switchTab('security')" class="tab-btn flex items-center space-x-2 px-6 py-3 rounded-lg font-medium text-sm transition-all whitespace-nowrap text-slate-500 hover:bg-slate-50 hover:text-slate-700">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>Financial Security</span>
+            </button>
+            <button id="btn-value" onclick="switchTab('value')" class="tab-btn flex items-center space-x-2 px-6 py-3 rounded-lg font-medium text-sm transition-all whitespace-nowrap text-slate-500 hover:bg-slate-50 hover:text-slate-700">
+                <i data-lucide="indian-rupee" class="w-4 h-4"></i>
+                <span>Value & Pricing</span>
+            </button>
+            <button id="btn-solutions" onclick="switchTab('solutions')" class="tab-btn flex items-center space-x-2 px-6 py-3 rounded-lg font-medium text-sm transition-all whitespace-nowrap text-slate-500 hover:bg-slate-50 hover:text-slate-700">
+                <i data-lucide="award" class="w-4 h-4"></i>
+                <span>Unique Solutions</span>
+            </button>
+        </div>
+
+        <!-- Tab Content Container -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 min-h-[500px]">
+            
+            <!-- OVERVIEW TAB -->
+            <div id="overview" class="tab-content active fade-in">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Why settle for bigger when you can choose <span class="text-red-600">smarter</span>?</h2>
+                    <p class="text-slate-600 text-lg">
+                        HDFC Life is a massive institution, but when it comes to your individual policy, sheer size isn't everything. 
+                        Kotak Life offers a higher safety net per policy, incredibly aggressive pricing, and faster on-the-ground support.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- HDFC Card -->
+                    <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-blue-900/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
+                            <i data-lucide="users" class="mr-2 w-5 h-5"></i> The HDFC Model
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="text-blue-500 mr-2 mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-slate-600">Massive scale driven by sheer volume of bank accounts.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="text-blue-500 mr-2 mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-slate-600">Highly automated, DIY digital processes.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="chevron-right" class="text-blue-500 mr-2 mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-slate-600">Brand premium built into policy pricing.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Kotak Card -->
+                    <div class="bg-red-50 rounded-xl p-6 border border-red-100 relative overflow-hidden group shadow-md">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-red-600/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        <div class="absolute top-4 right-4 bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded-full">
+                            Your Advantage
+                        </div>
+                        <h3 class="text-xl font-bold text-red-700 mb-4 flex items-center">
+                            <i data-lucide="heart-handshake" class="mr-2 w-5 h-5"></i> The Kotak Advantage
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="text-red-500 mr-2 mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-slate-800 font-medium">Higher excess capital reserved per policy (Solvency Ratio).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="text-red-500 mr-2 mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-slate-800 font-medium">Personalized, relationship-driven claim support.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="text-red-500 mr-2 mt-0.5 shrink-0 w-[18px] h-[18px]"></i>
+                                <span class="text-slate-800 font-medium">Highly competitive premiums for maximum coverage value.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECURITY TAB -->
+            <div id="security" class="tab-content fade-in">
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-2">The Ultimate Safety Net: Solvency Ratio</h2>
+                    <p class="text-slate-600">
+                        The IRDAI mandates a minimum Solvency Ratio of 1.50 (meaning the company has ₹150 for every ₹100 of risk). 
+                        Look at how much excess capital Kotak holds compared to the competition.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-10">
+                    <div class="space-y-8">
+                        <!-- HDFC Bar -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-blue-900">HDFC Life (~1.90x)</span>
+                                <span class="text-slate-500 text-sm">Regulatory Min: 1.50x</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-4 relative">
+                                <div class="bg-slate-400 h-4 rounded-full absolute left-0 top-0" style="width: 40%"></div>
+                                <div class="bg-blue-600 h-4 rounded-full absolute left-0 top-0" style="width: 63%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Kotak Bar -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-red-600 text-lg">Kotak Life (2.56x - 2.66x)</span>
+                                <span class="text-slate-500 text-sm">Massive Surplus</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-6 relative shadow-inner">
+                                <div class="bg-slate-400 h-6 rounded-full absolute left-0 top-0" style="width: 40%"></div>
+                                <div class="bg-red-500 h-6 rounded-full absolute left-0 top-0 shadow-md" style="width: 90%">
+                                    <div class="absolute right-2 top-1 w-4 h-4 bg-white/30 rounded-full animate-pulse"></div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-red-700 mt-2 font-medium">Kotak holds over ₹256 for every ₹100 of risk. That is ironclad peace of mind.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border border-slate-200 p-6 rounded-xl">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Claim Settlement Excellence</h3>
+                        <div class="flex items-end space-x-2 mb-2">
+                            <span class="text-4xl font-extrabold text-green-600">98.6%+</span>
+                            <span class="text-slate-500 mb-1">Overall CSR</span>
+                        </div>
+                        <p class="text-sm text-slate-600">
+                            Both companies boast near-perfect claim settlement records. However, Kotak specializes in rapid, hassle-free resolutions with dedicated relationship managers, ensuring your family isn't fighting algorithms during tough times.
+                        </p>
+                    </div>
+                    <div class="border border-red-200 bg-red-50 p-6 rounded-xl shadow-sm">
+                        <h3 class="text-lg font-bold text-red-800 mb-2">Immediate Claim Support</h3>
+                        <div class="flex items-end space-x-2 mb-2">
+                            <span class="text-3xl font-extrabold text-red-600">₹3 Lakh</span>
+                            <span class="text-red-800 font-medium mb-1">Immediate Payout</span>
+                        </div>
+                        <p class="text-sm text-red-700">
+                            On eligible policies, Kotak provides an instant payout upon claim intimation to cover immediate expenses (funeral, logistics) while the rest of the claim is processed seamlessly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VALUE TAB -->
+            <div id="value" class="tab-content fade-in">
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="flex-1 space-y-6">
+                        <h2 class="text-3xl font-bold text-slate-900">More Cover. <br/><span class="text-red-600">Lower Premium.</span></h2>
+                        <p class="text-slate-600 text-lg">
+                            Because HDFC Life heavily markets its brand, a "brand premium" is often built into their pricing structure. 
+                            Kotak Life operates with high efficiency, passing those savings directly to you.
+                        </p>
+                        
+                        <ul class="space-y-4 mt-6">
+                            <li class="flex bg-white border border-slate-200 p-4 rounded-lg shadow-sm">
+                                <div class="bg-red-100 p-2 rounded-full h-fit mr-4">
+                                    <i data-lucide="trending-up" class="text-red-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Aggressive Term Pricing</h4>
+                                    <p class="text-sm text-slate-600">Our flagship e-Term plan often beats HDFC Click 2 Protect by a noticeable margin for the exact same coverage amount.</p>
+                                </div>
+                            </li>
+                            <li class="flex bg-white border border-slate-200 p-4 rounded-lg shadow-sm">
+                                <div class="bg-red-100 p-2 rounded-full h-fit mr-4">
+                                    <i data-lucide="shield-check" class="text-red-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-800">No Hidden Overheads</h4>
+                                    <p class="text-sm text-slate-600">You pay for pure risk protection and wealth generation, not for funding massive advertising budgets.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="flex-1 w-full bg-slate-900 rounded-2xl p-8 text-white relative overflow-hidden shadow-xl">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-red-600 rounded-full opacity-20 blur-2xl"></div>
+                        <h3 class="text-xl font-bold mb-6 text-red-400">The Cost Compounding Effect</h3>
+                        <p class="text-slate-300 text-sm mb-6">
+                            Saving even ₹2,000 to ₹5,000 a year on your premium might seem small today. But over a 30-year term policy, that difference invested wisely equals lakhs of rupees in your pocket.
+                        </p>
+                        <div class="bg-slate-800 border border-slate-700 rounded-xl p-5">
+                            <div class="flex justify-between items-center border-b border-slate-700 pb-3 mb-3">
+                                <span class="text-slate-400">Competitor Premium</span>
+                                <span class="text-lg">Premium + Brand Cost</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-white">Kotak Premium</span>
+                                <span class="text-2xl font-bold text-red-400 border-b-2 border-red-400">Pure Value</span>
+                            </div>
+                        </div>
+                        <button class="w-full mt-6 bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-lg flex items-center justify-center transition-colors">
+                            Let's Compare Your Quotes <i data-lucide="arrow-right" class="ml-2 w-[18px] h-[18px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOLUTIONS TAB -->
+            <div id="solutions" class="tab-content fade-in">
+                <div class="mb-10 text-center">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Innovation that <span class="text-red-600">Matters</span></h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto">
+                        While HDFC relies heavily on complex, rider-heavy guaranteed plans, Kotak Life designs straightforward, highly innovative solutions built for modern Indian families.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Gen2Gen -->
+                    <div class="bg-white border-2 border-red-100 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-red-600"></div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Kotak Gen2Gen Protect</h3>
+                        <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                            Industry Unique
+                        </span>
+                        <p class="text-slate-600 mb-6">
+                            Why buy a policy that ends with you? Gen2Gen allows your life cover to seamlessly extend to your child. It is an intergenerational asset that secures not just your family today, but your child's family tomorrow.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="text-red-500 mr-2 w-4 h-4"></i> Cover passes to the next generation</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="text-red-500 mr-2 w-4 h-4"></i> 100% payout on terminal illness</li>
+                        </ul>
+                    </div>
+
+                    <!-- TULIP -->
+                    <div class="bg-white border border-slate-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-slate-800"></div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Kotak T.U.L.I.P</h3>
+                        <span class="inline-block bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                            Term + Wealth
+                        </span>
+                        <p class="text-slate-600 mb-6">
+                            Don't choose between protection and wealth creation. T.U.L.I.P beautifully merges the high sum-assured of a pure term plan with the aggressive market-linked wealth accumulation of a top-tier mutual fund equivalent.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="text-slate-800 mr-2 w-4 h-4"></i> High life cover multiples</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="text-slate-800 mr-2 w-4 h-4"></i> Market-linked wealth generation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Interactive Logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Styling classes for tabs
+        const activeClasses = 'bg-red-50 text-red-700 shadow-sm border border-red-100'.split(' ');
+        const inactiveClasses = 'text-slate-500 hover:bg-slate-50 hover:text-slate-700'.split(' ');
+
+        function switchTab(tabId) {
+            // 1. Hide all tab content
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // 2. Reset all buttons to inactive styling
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active-tab', ...activeClasses);
+                btn.classList.add(...inactiveClasses);
+                btn.classList.remove('border-transparent'); // Clean up any remaining borders
+            });
+
+            // 3. Show selected content
+            document.getElementById(tabId).classList.add('active');
+
+            // 4. Style the clicked button as active
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove(...inactiveClasses);
+            activeBtn.classList.add('active-tab', ...activeClasses);
+        }
+    </script>
+</body>
+</html>
